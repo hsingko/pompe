@@ -1,0 +1,16 @@
+{{define "main"}}
+<h1>
+  {{.Title}}
+</h1>
+<p class="timestamp">
+  发表于 {{.PublishDate.Format "2006-01-02"}}
+</p>
+
+{{.Content}}
+
+{{ if gt .Lastmod .PublishDate }}
+<p class="timestamp">
+  最后修改于 {{.Lastmod.Format "2006-01-02"}}
+</p>
+{{end}}
+{{end}}
