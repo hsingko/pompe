@@ -8,9 +8,11 @@
 
 {{.Content}}
 
-{{ if gt .Lastmod .PublishDate }}
+{{$pub:=.PublishDate.Format "2006-01-02"}}
+{{$lastmod:=.Lastmod.Format "2006-01-02"}}
+{{ if gt $lastmod $pub }}
 <p class="timestamp">
-  最后修改于 {{.Lastmod.Format "2006-01-02"}}
+  最后修改于 {{$lastmod}}
 </p>
 {{end}}
 {{end}}
