@@ -74,7 +74,8 @@ pre {
   overflow: auto;
   margin: 0;
   padding: 1em;
-  font-size: 120%;
+  /* font-size: 120%; */
+  font-size: 1rem;
   background-color: var(--bg01);
 }
 
@@ -194,10 +195,15 @@ footer {
   text-align: center;
 }
 
-h1 { font-size: 2em  }
-h2 { font-size: 1.8em }
-h3 { font-size: 1.6em }
-h4 { font-size: 1.4em }
-h5 { font-size: 1.2em }
-h6 { font-size: 1.1em }
+h1 { font-size: 1.5em }
+h2 { font-size: 1.25em;
+     color: #000080;
+     /* border-bottom-style: solid; */
+     /* border-bottom-width: 1px; */
+   margin-top: 2em;}
+h3 { font-size: 1.1em;
+     color: #700000;}
+h4 { font-size: 1.15em }
+h5 { font-size: 1.1em }
+h6 { font-size: 1em }
 
