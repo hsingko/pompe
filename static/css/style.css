@@ -197,12 +197,12 @@ footer {
 
 h1 { font-size: 1.5em }
 h2 { font-size: 1.25em;
-     color: #000080;
+     color: #2fafff;
      /* border-bottom-style: solid; */
      /* border-bottom-width: 1px; */
    margin-top: 2em;}
 h3 { font-size: 1.1em;
-     color: #700000;}
+     color: #ff5f59;}
 h4 { font-size: 1.15em }
 h5 { font-size: 1.1em }
 h6 { font-size: 1em }

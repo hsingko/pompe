@@ -1,18 +1,3 @@
 {{define "main"}}
 {{.Content}}
-
-
-<h4>
-最近文章  
-</h4>
-<ul>
-{{ range first 7 (where .Site.RegularPages "Type" "post") }}
-<!-- Display the details of each post -->
-<li>
-  <a href=""></a>
-  {{ .Title }}
-</li>
-{{ end }}
-  
-</ul>
 {{end}}
