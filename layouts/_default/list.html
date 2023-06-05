@@ -1,13 +1,27 @@
 {{define "main"}}
 <h1>{{.Title}}</h1>
+<!-- <ul> -->
+<!--   {{range .Pages.ByPublishDate.Reverse}} -->
+<!--   <li> -->
+<!--     {{.PublishDate.Format "2006-01-02"}}  -->
+<!--     <a href="{{.RelPermalink}}"> -->
+<!--        {{.Title}} -->
+<!--        </a> -->
+<!--     </li> -->
+<!-- {{end}} -->
+  <!-- </ul> -->
+共 {{len .Pages}} 篇文章。
+{{ range .Pages.GroupByDate "2006"}}
+<hr/>
+<h3>
+  {{.Key}}  <sub>[{{len .Pages}}]</sub>
+</h3>
 <ul>
-  {{range .Pages.ByPublishDate.Reverse}}
+    {{range .Pages}}
   <li>
-    {{.PublishDate.Format "2006-01-02"}} 
-    <a href="{{.RelPermalink}}">
-       {{.Title}}
-       </a>
-    </li>
-{{end}}
+{{ .Date.Format "01-02"}}  »   <a href="{{ .Permalink }}" style="text-decoration: none"> {{.Title}}</a>
+  </li>
+  {{end}}
 </ul>
+{{end}}
 {{end}}
