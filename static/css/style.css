@@ -1,5 +1,5 @@
 :root {
-  --bg00: #ffffff;
+  --bg00: #F4F3EE;
   --bg01: #fafafa;
   --bg02: #ebebeb;
   --fg00: #cccccc;
@@ -229,4 +229,19 @@ h5 {
 }
 h6 {
   font-size: 1em;
+}
+
+.articles-item{
+    display: flex;
+    font-style: italic;
+    line-height: 2rem;
+}
+
+.articles-item > a{
+    text-decoration: none;
+}
+
+.articles-item > time{
+    margin-left: auto;
+    color: var(--fg01);
 }

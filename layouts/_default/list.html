@@ -2,16 +2,18 @@
 <h1>{{.Title}}</h1>
 共 {{len .Pages}} 篇文章。
 {{ range .Pages.GroupByDate "2006"}}
-<hr/>
-<h3>
-  {{.Key}}  <sub>[{{len .Pages}}]</sub>
-</h3>
-<ul>
+<h2>
+  {{.Key}} 
+</h2>
+<div class="articles">
     {{range .Pages}}
-  <li>
-{{ .Date.Format "01-02"}}  »   <a href="{{ .Permalink }}" style="text-decoration: none"> {{.Title}}</a>
-  </li>
+  <div class="articles-item">
+    <a href="{{ .Permalink }}"> {{.Title}}</a>
+    <time datetime="{{.Date.Format "2006-01-02"}}">
+      {{ .Date.Format "01-02"}}
+    </time>
+  </div>
   {{end}}
-</ul>
+</div>
 {{end}}
 {{end}}
