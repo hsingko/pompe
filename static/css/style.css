@@ -59,9 +59,7 @@
 .timestamp-kwd {
   color: var(--blue);
 }
-.underline {
-  text-decoration: underline;
-}
+
 .footpara {
   display: inline;
 }
@@ -150,7 +148,8 @@ li {
   line-height: 1.7em;
 }
 a {
-  color: var(--fg03);
+    color: var(--fg03);
+    text-decoration: none;
 }
 a:hover {
   background-color: var(--bg02);
@@ -244,4 +243,14 @@ h6 {
 .articles-item > time{
     margin-left: auto;
     color: var(--fg01);
+}
+
+.articles > h2{
+    text-align: center;
+}
+
+a[href^="http"], a[href^="https"] ::after{
+    /* Styles for external links */
+    content: "out";
+    mark-size: cover; 
 }

@@ -2,10 +2,10 @@
 <h1>{{.Title}}</h1>
 共 {{len .Pages}} 篇文章。
 {{ range .Pages.GroupByDate "2006"}}
-<h2>
+<div class="articles">
+  <h2>
   {{.Key}} 
 </h2>
-<div class="articles">
     {{range .Pages}}
   <div class="articles-item">
     <a href="{{ .Permalink }}"> {{.Title}}</a>
