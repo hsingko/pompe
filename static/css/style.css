@@ -87,14 +87,16 @@ pre {
   margin: 0;
   padding: 1em;
   /* font-size: 120%; */
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: var(--bg01);
   font-family: monospace;
+  -webkit-text-size-adjust: none;
 }
 
-code {
+:not(pre) > code {
     font-family: monospace;
-    background-color: var(--bg01);
+    font-size: 0.9rem;
+  background-color: var(--bg01);    
 }
 
 
@@ -266,4 +268,9 @@ h6 {
 
 #content > ul > li {
     margin-bottom: 0.5em;
+}
+
+
+.footnotes{
+    margin-top: 5em;
 }
