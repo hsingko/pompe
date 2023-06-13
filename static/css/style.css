@@ -94,9 +94,9 @@ pre {
 }
 
 :not(pre) > code {
-    font-family: monospace;
-    font-size: 0.9rem;
-  background-color: var(--bg01);    
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--function-name)
 }
 
 
