@@ -1,3 +1,17 @@
 {{define "main"}}
 {{.Content}}
+
+
+<h2> 最近文章</h2>
+
+<ul>
+{{ range .Site.RegularPages | first 5}}
+
+<li>
+  <a href="{{.Permalink}}">{{.Title}}</a>  
+</li>
+
+{{end}}
+  
+</ul>
 {{end}}
