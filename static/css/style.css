@@ -56,9 +56,15 @@
 
 .timestamp {
     color: var(--blue);
+    font-size: 0.9rem;
+    font-style: italic;
 }
 .timestamp-kwd {
     color: var(--blue);
+}
+
+.figure-number{
+    display: none;
 }
 
 .footpara {
@@ -99,6 +105,7 @@ pre {
 :not(pre) > code {
     font-family: monospace;
     font-size: 0.9rem;
+    font-weight: bold;
     color: var(--function-name)
 }
 
@@ -111,6 +118,7 @@ figure {
 figcaption {
     text-align: center;
     font-size: 0.78em;
+    color: var(--fg01);
 }
 img {
     max-width: 100%;
@@ -142,10 +150,12 @@ span[class^="section-number"] {
     user-select: none;
 }
 body {
-    font-size: 1rem;
     background-color: var(--bg00);
     color: var(--fg02);
 }
+
+
+
 #preamble,
 #content,
 #postamble {
@@ -211,7 +221,7 @@ footer {
 }
 
 .blog-footer {
-    margin: auto;
+    margin: 0 auto;
     max-width: 25em;
     padding: 0.75em 1em 1em 0.75em;
     margin-top: 6em;
@@ -220,29 +230,24 @@ footer {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
-h2 {
-    font-size: 1.25em;
-    color: var(--warm);
-    font-weight: 700;
-    margin-top: 2em;
+
+h2,h3,h4{
+    line-height: 1.46;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    hyphens: none;
 }
-h3 {
-    font-size: 1.1em;
-    font-weight: 700;
-    color: var(--cold);
-}
-h4 {
-    font-size: 1.05em;
-    font-weight: 700;
-    color: var(--calm);
-}
-h5 {
-    font-size: 1.1em;
-}
-h6 {
-    font-size: 1em;
+
+
+.verse{
+    text-align: center;
+    border: dashed 1px;
+    font-style: italic;
+    border-radius: 3px;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
 }
 
 .articles-item{
