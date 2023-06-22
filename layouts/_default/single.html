@@ -7,6 +7,16 @@
   发表于 {{.PublishDate.Format "2006-01-02"}}
 </p>
 
+
+{{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
+<div id="toc">
+<details>
+  <summary> 目录 </summary>
+  {{ .TableOfContents }}
+</details>  
+</div>
+{{end}}
+
 {{.Content}}
 
 {{$pub:=.PublishDate.Format "2006-01-02"}}
