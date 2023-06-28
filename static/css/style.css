@@ -78,7 +78,7 @@ pre {
   padding: 1em;
   /* font-size: 120%; */
   font-size: 0.9rem;
-  background-color: var(--bg01);
+  /* background-color: var(--bg01); */
   font-family: monospace;
   -webkit-text-size-adjust: none;
   border: 1px solid #ccc;
