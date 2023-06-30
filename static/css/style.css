@@ -336,3 +336,9 @@ a.footnote-ref::before{
 a.footnote-ref::after{
     content: ']';
 }
+
+a[href^="http"]::after{
+    content: "⤴";
+    vertical-align: super;
+    font-size: 12px;
+}
