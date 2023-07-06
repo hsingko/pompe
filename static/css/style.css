@@ -89,9 +89,9 @@ pre {
   font-family: monospace;
   font-size: 0.9rem;
   font-weight: bold;
-  background-color: var(--function-name);
   border-radius: 0.3rem;
-  color: var(--bg01);
+  /* border-color: var(--function-name); */
+  /* color: var(--bg01); */
   padding: 0.1rem 0.4rem;
   word-break: break-word;
 }
@@ -215,8 +215,8 @@ footer {
   text-align: center;
 }
 
-.blog-footer > p{
-    line-height: 0.1rem;
+.blog-footer > p {
+  line-height: 0.1rem;
 }
 
 h1 {
@@ -314,15 +314,19 @@ details {
   margin-bottom: 0.5rem;
 }
 
-
-h2 {
-    border-bottom: 1px solid var(--fg00);
+h2::before{
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  background-color: var(--fg03);
+  margin-right: 7px;
 }
 
-h3,h4{
-    font-weight: 600;
+h3,
+h4 {
+  font-weight: 600;
 }
-
 
 .sep {
   width: 180px;
@@ -330,15 +334,18 @@ h3,h4{
   vertical-align: middle;
 }
 
-a.footnote-ref::before{
-    content: '[';
+a.footnote-ref::before {
+  content: "[";
 }
-a.footnote-ref::after{
-    content: ']';
+a.footnote-ref::after {
+  content: "]";
+}
+a.footnote-ref {
+  margin-left: 5px;
 }
 
-a[href^="http"]::after{
-    content: "⤴";
-    vertical-align: super;
-    font-size: 12px;
+a[href^="http"]::after {
+  content: "⤴";
+  vertical-align: super;
+  font-size: 12px;
 }
