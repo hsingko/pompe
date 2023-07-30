@@ -122,15 +122,6 @@ h5,
 h6 {
   font-weight: 300;
 }
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
-  color: unset;
-  text-decoration: none;
-}
 span[class^="section-number"] {
   font-size: 0.75em;
   user-select: none;
@@ -162,10 +153,9 @@ a {
   text-decoration: none;
 }
 a:hover {
-  background-color: var(--bg02);
+  text-decoration: underline;
 }
 blockquote {
-  margin: 0;
   padding: 0.4em 1.2em;
   border-left: 0.2em solid var(--fg01);
   background-color: var(--bg01);
@@ -183,7 +173,7 @@ blockquote {
 }
 #header > ul li a {
   text-transform: uppercase;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 #header > ul li + li:before {
   content: "|";
@@ -244,10 +234,6 @@ h4 {
   font-style: italic;
   line-height: 2.2rem;
   margin-bottom: 0.7rem;
-}
-
-.articles-item > a {
-  text-decoration: none;
 }
 
 .articles-item > time {
@@ -313,17 +299,16 @@ details {
 }
 
 h2::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 15px;
-  background-color: var(--fg03);
-  margin-right: 7px;
+  content: "*";
+  color: var(--fg03);
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 3px;
 }
 
-h3,
-h4 {
-  font-weight: 600;
+h2{
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .sep {
@@ -343,10 +328,11 @@ a.footnote-ref {
 }
 
 a[href^="http"]::after {
-  content: "⤴";
-  vertical-align: super;
-  font-size: 12px;
+  content: ""; /* Required for pseudo-elements, like ::after */
+  display: inline-flex;
+  width: 11px; /* Set the width of your SVG icon */
+  height: 11px; /* Set the height of your SVG icon */
+  margin-left: 4px;
+  background-image: url(/img/external-link.svg); /* Replace with the path to your SVG icon */
+  background-repeat: no-repeat;
 }
-
-
-
