@@ -1,7 +1,4 @@
 {{define "main"}}
-<h1>{{.Title}}</h1>
-<!-- 共 {{len .Pages}} 篇文章。 -->
-{{.Content}}
 {{ range .Pages.GroupByDate "2006"}}
 <div class="articles">
   <h2>

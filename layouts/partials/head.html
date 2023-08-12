@@ -1,5 +1,13 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <title>{{.Title}}</title>
+  <style type="text/css" media="screen">
+    @media (prefers-color-scheme: dark) {
+      {{ partial "css/syntax-dark.css" . | safeCSS }}
+    }
+    @media (prefers-color-scheme: light) {
+      {{ partial "css/syntax-light.css" . | safeCSS }}
+    }
+  </style>
 </head>
