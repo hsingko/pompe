@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&display=swap");
+@import url("https://192960944.r.cdn36.com/chinesefonts2/packages/jhlst/dist/京華老宋体v1_007/result.css");
 :root {
   --bg00: #ffffff;
   --bg01: #fafafa;
@@ -66,7 +67,8 @@
 
 /*  Content */
 #content {
-  font-family: "Literata", "Noto Serif CJK SC";
+  /* font-family: "Literata", "Noto Serif CJK SC"; */
+  font-family: "KingHwa_OldSong";
 }
 
 /* code */
@@ -104,8 +106,8 @@ img {
   display: block;
   max-width: 100%;
   margin: 1em 0 1em 0;
-  box-shadow: 0 4px 16px #00000029;
-  }
+  box-shadow: 0 4px 16px var(--fg02);
+}
 .collage {
   display: flex;
 }
